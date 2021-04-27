@@ -26,6 +26,6 @@ The training has been undertaken from the retinanet model as well as the YOLO mo
 
 ## Inferences
 
-`Original`             |  `Detected & Tracked`
-:-------------------------:|:-------------------------:
-![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/testvid.gif)  |  ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/detection.gif)
+            `Original`             |  `Detected & Tracked`
+            :-------------------------:|:-------------------------:
+            ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/testvid.gif)  |  ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/detection.gif)
