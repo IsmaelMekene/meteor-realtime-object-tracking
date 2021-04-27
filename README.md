@@ -1,4 +1,4 @@
-# meteor-realtime-object-tracking
+#  📹 meteor-realtime-object-tracking 📷
 
 This is a Computer Vision project aiming to create a real time object detector based on Retinanet (either YOLO) and Build a logical tracking system in the mean time. The implementation of this prototype has been based from transfer Learning with pretrained models on COCO Dataset.
 
@@ -35,13 +35,24 @@ For a j-th frame corresponding to a k-th detection, the system of tracking is us
  - [x] The pedestrians from the (k-1)-th detection that do not have any match in the k-th detection are the most difficult to deal with. These might pedestrians leaving the camera's vision sight, they might be pedestrians in occlusion (either with other pedestrians or any larger objects). 
  
  - [ ] In the case of the potential occlusion, the tracking system of the Hungarian Algorithm joined to the Kalman Filter would be used to predict the tracjectories of the concerned pedestrians and then predict their boxes positions after occlusion.
- - [ ] In the case of the pedestrians leaving the camera's vision sight, the cannot be automatically erase from memory, as there a possibility of them re-entering back in the vision. Therefore, a smarter technique is to give them a certain period of time and affecting them specific caracteristics in order to recognize them once there are back in the vision, or finally erase their IDs one the period of time is over.
+ - [ ] In the case of the pedestrians leaving the camera's vision sight, the cannot be automatically erase from memory, as there a possibility of them re-entering back in the vision. Therefore, a smarter technique is to give them a certain period of time and affecting them specific caracteristics in order to recognize them once there are back in the vision, or finally erase their IDs once the period of time is over.
 
-## Inferences
 
+
+## Visualization & Critics of the results
+
+This is a sequence of a videoshot used in the aim of testing the prototype. As seen, this sequence relavely not dense in terms of number of pedestrians, therefore the risk of having occlusion is high reduced. 
 `Original`             |  `Detected & Tracked`
 :-------------------------:|:-------------------------:
 ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/testvid.gif)  |  ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/detection.gif)
+
+However, the main difficulty of this project is still to deal with occlusion situation, as I could not find a better way to solve it(Not Yet!).
+
+
+
+
+
+Please feel free to leave a comment in case you have a better trick, Thanks 😉!
 
 
 
