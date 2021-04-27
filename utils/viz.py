@@ -96,3 +96,28 @@ def draw_annotations(image, annotations, color=(0, 255, 0), label_to_name=None):
         caption = '{}'.format(label_to_name(label) if label_to_name else label)
         draw_caption(image, annotations['bboxes'][i], caption)
         draw_box(image, annotations['bboxes'][i], color=c)
+        
+        
+        
+        
+def draw_tracks(image, tracks, colour):
+    """
+    Draw on input image.
+    Args:
+        image (numpy.ndarray): image
+        tracks (list): list of tracks to be drawn on the image.
+    Returns:
+        numpy.ndarray : image with the track-ids drawn on it.
+    """
+
+    trk_id = tracks.id
+    xcentroid = tracks.centroid[0]
+    ycentroid = tracks.centroid[1]
+    #print(tracks.centroid)
+    text = "{}".format(trk_id)
+    text = text[:5]
+    cv2.putText(image, text, (xcentroid - 10, ycentroid - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, colour, 2)
+    cv2.circle(image, (xcentroid, ycentroid), 4, colour,-1)
+    return image
+
+
