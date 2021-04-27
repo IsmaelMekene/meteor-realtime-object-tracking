@@ -364,6 +364,42 @@ def draw_boxes(image, box_points, draw_box, label, percentage_probability, color
   
   
   
+  def padded_fragment(image_array):
+    
+  image = image_array
+  pad_frag_height = int((image.shape[0]*50)/644)
+  pad_frag = np.ones([pad_frag_height,image.shape[1],3], np.uint8)
+  padded = cv2.vconcat([image,pad_frag])
+
+  x,y,w,h = 0,image.shape[0],image.shape[1],pad_frag_height
+
+  # Draw black background rectangle
+  cv2.rectangle(image, (x, x), (x + w, y + h), (0,0,0), -1)
+
+  # Add text
+  alloo = cv2.putText(padded, "Live Tracking ~~", (int((w*1)/778),y + int(3*h/4)), cv2.FONT_HERSHEY_SIMPLEX, (w*0.5/778), (0,128,0), int(w*2/778))
+  return alloo 
+
+
+
+def box_iou2(a, b):
+    '''
+    Helper funciton to calculate the ratio between intersection and the union of
+    two boxes a and b
+    a[0], a[1], a[2], a[3] <-> left, up, right, bottom
+    '''
+    
+    w_intsec = np.maximum (0, (np.minimum(a[2], b[2]) - np.maximum(a[0], b[0])))
+    h_intsec = np.maximum (0, (np.minimum(a[3], b[3]) - np.maximum(a[1], b[1])))
+    s_intsec = w_intsec * h_intsec
+    s_a = (a[2] - a[0])*(a[3] - a[1])
+    s_b = (b[2] - b[0])*(b[3] - b[1])
   
+    return float(s_intsec)/(s_a + s_b -s_intsec)
+
+
+
+
+
   
   
