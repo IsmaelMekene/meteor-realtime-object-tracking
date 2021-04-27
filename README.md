@@ -46,7 +46,7 @@ This is a sequence of a videoshot used in the aim of testing the prototype. As s
 :-------------------------:|:-------------------------:
 ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/testvid.gif)  |  ![](https://github.com/IsmaelMekene/meteor-realtime-object-tracking/blob/main/data/detection.gif)
 
-However, the main difficulty of this project is still to deal with occlusion situation, as I could not find a better way to solve it(Not Yet!).
+However, the main difficulty of this project is still to deal with occlusion situation, as I could not find a better way to solve it (Not Yet!).
 
 
 
