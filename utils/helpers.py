@@ -400,6 +400,12 @@ def box_iou2(a, b):
 
 
 
+def write_each_second(frame_array, pad_frag_height, nb_ped, unkn):
+  array_height = frame_array.shape[0]
+  array_width = frame_array.shape[1]
+  text = f"The number of Pedestrians is: {nb_ped}"  #and Unknown are: {unkn}"
+  average_writer = cv2.putText(frame_array,text,(int((array_width*150)/778),int(array_height-int(pad_frag_height/4))),cv2.FONT_HERSHEY_SIMPLEX, (array_width*0.5/778), (255,255,255), int(array_width*2/778))
+  return average_writer
 
   
   
