@@ -16,7 +16,8 @@ This project aims to detect and track pedestrians (in motion or not) from a give
 
 ## Installation 
 
-                                                `pip install -r requirements.txt`
+            pip install -r requirements.txt
+
 
 ## Inferences
 
