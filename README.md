@@ -22,7 +22,7 @@ This project aims to detect and track pedestrians (in motion or not) from a give
 
 As this project is based on a transfer learning, the pretrained weights have originally resulted from trainings over the famous COCO dataset. Moreover, in the context of this task, further traing were done on images collected personally. Those images are typical street shots, with pedestrians (In motion or not, from near or far and from a high view or not).
 
-The training has been undertaken from the retinanet model as well as the YOLO model and both weights are available in [here)()
+The training has been undertaken from the retinanet model as well as the YOLO model and both weights are available in [here]()
 
 ## Inferences
 
